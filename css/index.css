@@ -1,0 +1,187 @@
+*{
+    margin:0 ;
+    padding:0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background: #fff;
+}
+/* 头部 */
+header{
+    width:980px;
+    height:118px;
+    margin: 0 auto;
+}
+header .head{
+    width:100%;
+    height:59px;
+    padding:10px 0;
+    color:rgb(141, 144, 149);
+    font-size: 28px;
+    letter-spacing: 12px;
+    text-align: center;
+    line-height: 59px;
+    font-family: 微软雅黑;
+}
+header .nav{
+    width:980px;
+    height:37px;
+    border-top: 1px solid #BABABA;
+    border-bottom: 1px solid #bababa;
+    margin:0 auto;
+    text-align: center;
+}
+header .nav .navbox{
+    width:490px;
+    height:100%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+header .nav .small{
+    width:62px;
+    height:100%;
+}
+header .nav .small a{
+    display: block;
+    font: 14px/22px 微軟正黑體, Helvetica, Arial, Verdana, sans-serif;
+    color:#6b6b6b;
+    width:100%;
+    line-height: 37px;
+    height:100%;
+}
+.self{
+    width:980px;
+    height:300px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.self .zp{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    padding-top: 30px;
+}
+.self .word{
+    width:500px;
+    font-size: 14px;
+    color:#6b6b6b;
+    padding-top: 30px;
+}
+/* 主体、轮播图 */
+.main{
+    width:980px;
+    height:952px;;
+    margin: 0 auto;
+}
+.main h2{
+    height:56px;
+    line-height: 56px;
+    padding-left: 20px;
+    font-family: 微软雅黑;
+}
+.main .flash{
+    width:972px;
+    height:370px;
+    margin:0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.main .flash a{
+    display: block;
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:972px;
+}
+.main .flash .btn{
+    width:70px;
+    height:12px;
+    position: absolute;
+    bottom:10px;
+    left:0;
+    right:0;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.main .flash .btn .sbtn{
+    width:12px;
+    height:12px;
+    border-radius: 8px;
+    border:1px solid #fff;
+    background-color:rgba(0, 0, 0, 0.21);
+}
+.main .flash .btn .active{
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.21);
+}
+.main .flash .next{
+    width: 32px;
+    height: 32px;
+    margin-top: -16px;
+    margin-left: -16px;
+    position: absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto 0;
+    cursor: pointer;
+    background-image: url(../img/rs-default.png);
+    background-position: -64px -64px;
+    background-color: #151515;
+    display: none;
+    border-radius: 2px;
+}
+.main .flash .prev{
+    width: 32px;
+    height: 32px;
+    margin-top: -16px;
+    margin-left: -16px;
+    position: absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    margin:auto 0;
+    cursor: pointer;
+    background-image: url(../img/rs-default.png);
+    background-position: -64px -32px;
+    background-color: #151515;
+    border-radius: 2px;
+    display: none;
+}
+.main .imgbox{
+    width:980px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.main .imgbox a{
+    display: block;
+    width:210px;
+    height:370px;
+}
+footer{
+    width:980px;
+    height:126px;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+}
+footer img{
+    display: block;
+}
+footer .word{
+    font-size: 16px;
+    height:20px;
+    align-self: flex-end;
+    margin-left: 10px;
+    color:#b0b0b0;
+}

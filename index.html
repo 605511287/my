@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人网站</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <header>
+        <div class="head">
+            个人网站
+        </div>
+        <div class="nav">
+            <div class="navbox">
+                    <div class="small"><a href="">首页</a></div>
+                    <div class="small"><a href="">简介</a></div>
+                    <div class="small"><a href="">作品</a></div>
+                    <div class="small"><a href="">联系</a></div>
+                    <div class="small"><a href="">专业</a></div>  
+            </div>
+        </div>
+    </header>
+    <div class="self">
+            <div class="zp"><img src="" alt=""></div>
+            <div class="word">
+                这是一段自我介绍：<br>
+                我叫李瑞波，来自河北邯郸，就读于山西农业大学信息与计算科学专业。我吃苦耐劳，工作认真，能很快适应新环境，处事冷静，学习能力较强，对自己要求严格，条理性强，善于整理，具有良好的团队精神和较强的组织能力，具有扎实的会计专业知识和较强的实务操作技能
+            </div>
+        </div>
+    <div class="main">
+        <h2>Web端作品展示</h2>
+        <div class="flash">
+            <a href="https://605511287.github.io/xiaomijs/" style="left:0"><img src="img/2018-08-09_231603.jpg" alt=""></a>
+            <a href=" https://605511287.github.io/suning/"><img src="img/2018-08-09_232011.jpg" alt="" width="972" height="370"></a>
+            <a href=" https://605511287.github.io/siyuan/"><img src="img/2018-08-09_232136.jpg" alt=""  width="972" height="370"></a>
+            <div class="btn">
+                <div class="sbtn active"></div>
+                <div class="sbtn"></div>
+                <div class="sbtn"></div>
+            </div>
+            <div class="next">
+
+            </div>
+            <div class="prev">
+
+            </div>
+        </div>
+        <h2 style="margin-top:50px">移动端作品展示</h2>
+        <div class="imgbox">
+            <a href=""><img src="img/2018-08-09_233650.jpg" alt=""></a>
+            <a href=""><img src="img/2018-08-09_233928.jpg" alt=""></a>
+            <a href=""><img src="img/2018-08-09_234034.jpg" alt=""></a>
+            <a href=""><img src="img/2018-08-09_234143.jpg" alt=""></a>
+        </div>
+    </div>
+    <footer>
+        <img src="img/aHR0cDovLzU2OWM4NGI5Y2I0NTMudDc0LnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8wMS80MDAyNjUzZjk3MWNiMGE3YWZjMTE2OWQyOTA2OTFhYS0xNjh4MTI2LnBuZw_p_p100_p_3D_p_p100_p_3D.png" alt="" width="168" height="126">
+        <div class="word">电话联系方式:18335138816</div>
+    </footer>
+</body>
+</html>
+<script>
+    let t = setInterval(move,3000);
+    let now=0,next=0;
+    let flag =true;
+    $(".flash").hover(function(){
+        $(".flash .next").fadeIn();
+        $(".flash .prev").fadeIn();
+        clearInterval(t);
+    },function(){
+        $(".flash .next").fadeOut();
+        $(".flash .prev").fadeOut();
+        t = setInterval(move,3000);
+    })   
+    function move(x=true){
+        flag=false;
+        if(x==true){
+            next++;
+            if(next==3){
+                next=0;
+            }
+            $(".flash a").eq(next).css("left","972px")
+            $(".flash .sbtn").eq(next).addClass("active");
+            $(".flash .sbtn").eq(now).removeClass("active");                    
+            $(".flash a").eq(now).animate({left:-972},1000)
+            $(".flash a").eq(next).animate({left:0},1000,function(){
+                flag = true;
+            })
+            now = next;
+        }
+        else{
+            next--;
+            if(next==-1){
+                next=2;
+            }
+            $(".flash a").eq(next).css("left","-972px")
+            $(".flash .sbtn").eq(next).addClass("active");
+            $(".flash .sbtn").eq(now).removeClass("active");                    
+            $(".flash a").eq(now).animate({left:972},1000)
+            $(".flash a").eq(next).animate({left:0},1000,function(){
+                flag = true;
+            })
+            now = next;
+        }
+    }
+    $(".flash .next").click(function(){
+      if(!flag){
+          return;
+      }
+      else{
+          move();
+      }
+    })
+    $(".flash .prev").click(function(){
+       if(!flag){
+            return;
+       }
+       else{
+           move(x=false);
+       }
+    })
+</script>
