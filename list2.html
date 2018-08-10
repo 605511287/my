@@ -4,38 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>个人网站</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/list2.css">
     <script src="js/jquery-3.2.1.js"></script>
 </head>
 <body>
     <header>
         <div class="head">
-            个人网站
+            个人作品
         </div>
         <div class="nav">
             <div class="navbox">
                     <div class="small"><a href="index.html">首页</a></div>
                     <div class="small"><a href="list1.html">简介</a></div>
-                    <div class="small"><a href="list2.html">作品</a></div>
+                    <div class="small"><a href="">作品</a></div>
                     <div class="small"><a href="">联系</a></div>
                     <div class="small"><a href="">专业</a></div>  
             </div>
         </div>
     </header>
-    <div class="self">
-            <div class="title">个人简介</div>
-            <div class="zp"><img src="img/fd039245d688d43fe734c732711ed21b0ff43b54.jpg" alt=""></div>
-            <div class="word">
-                <h2>李瑞波</h2>
-                <h3>
-                    专业：山西农业大学信息与计算科学
-                </h3>
-                <h3>专业技能：网站建设、python、人工智能</h3>
-            </div>
-        </div>
     <div class="main">
-        <h2>Web端部分作品展示</h2>
+        <h2 style="margin-top:50px">Web端作品展示</h2>
         <div class="flash">
             <a href="https://605511287.github.io/xiaomijs/" style="left:0"><img src="img/2018-08-09_231603.jpg" alt=""></a>
             <a href=" https://605511287.github.io/suning/"><img src="img/2018-08-09_232011.jpg" alt="" width="972" height="370"></a>
@@ -52,22 +41,26 @@
 
             </div>
         </div>
-        <h2 style="margin-top:50px">移动端部分作品展示</h2>
+        <h2 style="margin-top:50px">移动端作品展示</h2>
         <div class="imgbox">
             <a href=" https://605511287.github.io/yidongduan/"><img src="img/2018-08-09_233650.jpg" alt=""></a>
             <a href=" https://605511287.github.io/yidongduan/"><img src="img/2018-08-09_233928.jpg" alt=""></a>
             <a href=" https://605511287.github.io/yidongduan/"><img src="img/2018-08-09_234034.jpg" alt=""></a>
             <a href=" https://605511287.github.io/yidongduan/"><img src="img/2018-08-09_234143.jpg" alt=""></a>
         </div>
+        <div class="game">
+        <h2 style="margin-top:50px">移动端小游戏</h2> 
+            <div class="con">
+                <a href=" https://605511287.github.io/fontgame/">
+                    <img src="img/2018-08-10_111224.jpg" alt="">
+                </a>
+            </div>
+        </div>
     </div>
-    <footer>
-        <img src="img/aHR0cDovLzU2OWM4NGI5Y2I0NTMudDc0LnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8wMS80MDAyNjUzZjk3MWNiMGE3YWZjMTE2OWQyOTA2OTFhYS0xNjh4MTI2LnBuZw_p_p100_p_3D_p_p100_p_3D.png" alt="" width="168" height="126">
-        <div class="word">电话联系方式:18335138816</div>
-    </footer>
 </body>
 </html>
 <script>
-    let t = setInterval(move,3000);
+     let t = setInterval(move,3000);
     let now=0,next=0;
     let flag =true;
     $(".flash").hover(function(){
